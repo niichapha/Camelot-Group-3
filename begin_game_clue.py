@@ -8,7 +8,7 @@ def all_game_setup():
     action('CreatePlace(BookPlace, Library)')
     action('CreatePlace(Castle, GreatHall)')
     action('CreatePlace(Alchemy, AlchemyShop)')
-    action('CreatePlace(Weaponshop, Blacksmith)')
+    action('CreatePlace(WeaponShop, Blacksmith)')
         
 
 # Create Characters
@@ -35,11 +35,18 @@ def all_game_setup():
     action('SetClothing(Princess Aida, Noble)', False)
     
 #creating Items
-    action('CreateItem("BluePotion",BluePotion)')
-	action('CreateItem("RedPotion", Red)')
-	action('CreatItem("PurplePotion",PurplePotion)')
-	action('CreateItem("Sword",Sword)')
-	action('CreateItem("Hammer",Hammer)')
+    	action('CreateItem("HealingPotion",BluePotion)')
+	action('CreateItem("FirePotion", RedPotion)')
+	action('CreatItem("EnergyPotion",PurplePotion)')
+	action('CreateItem("Swords",Sword)')
+	action('CreateItem("Hammers",Hammer)')
+	
+#SetPosition for Items
+	 action('SetPosition(HealingPotion, Alchemy.AlchemistTable.Center)', False)
+	 action('SetPosition(FirePotion, Alchemy.AlchemistTable.Right)', False)
+ 	 action('SetPosition(EnergyPotion, Alchemy.Table.FrontRight)', False)
+	 action('SetPosition(Swords, WeaponShop.Chest)', False)
+	 action('SetPosition(Hammers, WeaponShop.Table.Right)', False)	
     
 #creating clues for alchemist_shop
 
