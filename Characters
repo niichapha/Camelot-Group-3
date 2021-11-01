@@ -2,6 +2,7 @@
 Project: PSD Camelot Group 3
 Initial by Nichapha
 '''
+from action import action
 
 # Create Characters
 
