@@ -6,7 +6,7 @@ def GreatHall_setup():
 	action('PlaySound(Serenity, Alch, True)')
 	
 	action('Enter(Evander, GreatHall.Gate, true)')
-	action('SetCameraFocus(Edmund)')
+	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
 	action('EnableInput()')
 
