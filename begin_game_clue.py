@@ -33,24 +33,39 @@ def all_game_setup():
     action('SetHairStyle(Princess Aida, Short)', False)
     action('SetHairColor(Princess Aida, Brown)', False)
     action('SetClothing(Princess Aida, Noble)', False)
-    
-#creating Items
-    	action('CreateItem("HealingPotion",BluePotion)')
-	action('CreateItem("FirePotion", RedPotion)')
-	action('CreatItem("EnergyPotion",PurplePotion)')
-	action('CreateItem("Swords",Sword)')
-	action('CreateItem("Hammers",Hammer)')
+
+    #alchemyshop guy
+    action('CreateCharacter(Jason, F)')
+    action('SetClothing(Jason, Merchant)', False)
+    action('SetHairStyle(Jason, Spiky)', False)
+    action('SetPosition(Jason, Alchemy.Bar)')
+    action('MoveAway(Alchemy.Bar)')
+    action('WalkToSpot(Jason, 925.3, 0.3, 5.0)', False)
+    action('SetExpression(Jason, happy)', False)
+    action('SetSkinColor(Jason, 7)', False)
+	
+    #Blacksmith guy
+    action('CreateCharacter(Aoki, F)')
+    action('SetClothing(Aoki, Merchant)', False)
+    action('SetHairStyle(Aoki, Spiky)', False)
+    action('SetPosition(Aoki, WeaponShop.Table)')
+    action('SetExpression(Aoki, happy)', False)
+    action('SetSkinColor(Aoki, 5)', False)
 	
 #SetPosition for Items
 	 action('SetPosition(HealingPotion, Alchemy.AlchemistTable.Center)', False)
 	 action('SetPosition(FirePotion, Alchemy.AlchemistTable.Right)', False)
  	 action('SetPosition(EnergyPotion, Alchemy.Table.FrontRight)', False)
-	 action('SetPosition(Swords, WeaponShop.Chest)', False)
-	 action('SetPosition(Hammers, WeaponShop.Table.Right)', False)	
+	 action('SetPosition(SwordofHeisenberg, WeaponShop.Chest)', False)
+	 action('SetPosition(HammerofHeisenberg, WeaponShop.Table.Right)', False)	
     
 #creating clues for alchemist_shop
 
-action('CreateItem(Energy Potion, PurplePotion)', False)
+action('CreateItem(EnergyPotion, PurplePotion)', False)
+action('CreateItem("HealingPotion",BluePotion)',False)
+action('CreateItem("FirePotion", RedPotion)',False)
+
 
 #creating clues for blacksmith_shop
-action('CreateItem(Sword of Heisenberg , Sword)', False)
+action('CreateItem(SwordofHeisenberg , Sword)', False)
+action('CreateItem(HammerofHeisenberg , Hammer)', False)
