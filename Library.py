@@ -6,7 +6,7 @@ def library_setup():
 	action('PlaySound(Serenity, Alch, True)')
 	
 	action('Enter(Evander, Library.Door, true)')
-	action('SetCameraFocus(Edmund)')
+	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
 	action('Pickup(Evander, SpellBook)')
 	action('PutDown(Evander, SpellBook,Library.Table)')
