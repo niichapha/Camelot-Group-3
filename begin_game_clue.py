@@ -9,6 +9,7 @@ def all_game_setup():
     action('CreatePlace(Castle, GreatHall)')
     action('CreatePlace(Alchemy, AlchemyShop)')
     action('CreatePlace(Weaponshop, Blacksmith)')
+        
 
 # Create Characters
 
@@ -32,6 +33,13 @@ def all_game_setup():
     action('SetHairStyle(Princess Aida, Short)', False)
     action('SetHairColor(Princess Aida, Brown)', False)
     action('SetClothing(Princess Aida, Noble)', False)
+    
+#creating Items
+    action('CreateItem("BluePotion",BluePotion)')
+	action('CreateItem("RedPotion", Red)')
+	action('CreatItem("PurplePotion",PurplePotion)')
+	action('CreateItem("Sword",Sword)')
+	action('CreateItem("Hammer",Hammer)')
     
 #creating clues for alchemist_shop
 
