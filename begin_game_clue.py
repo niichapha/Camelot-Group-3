@@ -1,4 +1,4 @@
-from action import action
+from action1 import action
 
 def all_game_setup():
     action('SetTitle(\"The Destiny\")', False)
