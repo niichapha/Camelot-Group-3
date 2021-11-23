@@ -4,7 +4,7 @@ def check_for_success(command):
 		if received == 'succeeded ' + command:
 			return True
 		elif received.startswith('failed ' + command):
-			return False
+			return False 
 
 
 
