@@ -1,11 +1,11 @@
 '''
 Initial by Nichapha
+Update 11/28/21
 '''
 from action import action
 
 # Create Characters
-#Test push
-    # Main Character(Witcher Evander)
+    # Player(Witcher Evander)
     action('CreateCharacter(Evander, B)')
     action('SetEyeColor(Evander, Brown)', False)
     action('SetHairStyle(Evander, Spiky)', False)
@@ -25,5 +25,31 @@ from action import action
     action('SetHairStyle(Princess Aida, Short)', False)
     action('SetHairColor(Princess Aida, Brown)', False)
     action('SetClothing(Princess Aida, Noble)', False)
+
+     # Yennefer
+    action('CreateCharacter(Yennefer, A)')
+    action('SetHairStyle(Yennefer, Long)', False)
+    action('SetHairColor(Yennefer, Brown)', False)
+    action('SetClothing(Yennefer, Peasant)', False)
+
+    # Merchant at Blacksmith & AlchemyShop
+    action('CreateCharacter(Merchant, F)')
+    action('SetClothing(Merchant, Merchant)', False)
     
-    
+    # Bandit
+    action('CreateCharacter(Enemy, D)')
+    action('SetClothing(Enemy, Bandit)', False)
+
+    # Soldier
+    action('CreateCharacter(Soldier, D)')
+    action('SetClothing(Soldier, HeavyArmour)', False)
+
+    # Stranger
+    action('CreateCharacter(Stranger, G)')
+    action('SetHairStyle(Stranger, Straight)', False)
+    action('SetClothing(Stranger, Beggar)', False)
+
+    # Spy
+    action('CreateCharacter(Spy, D)')
+    action('SetHairStyle(Stranger, Short)', False)
+    action('SetClothing(Spy, LightArmour)', False)
