@@ -90,4 +90,4 @@ action('HideDialog()')
 action('SetExpression(Evander, Angry)')
 
 while(True):
-	input()
+	input() 
