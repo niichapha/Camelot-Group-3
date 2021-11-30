@@ -1,7 +1,3 @@
-'''
-Initial by Nichapha
-Update 11/28/21
-'''
 from action1 import action
 from char import Char
 
