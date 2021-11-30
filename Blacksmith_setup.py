@@ -4,7 +4,7 @@ from dialogues import dialogue_char
 def blacksmith():
 	action('StopSound()')
 	action('PlaySound(Serenade, weap, True)')
-	action('SetPosition(Merchant,weap.BackDoor)')
+	action('SetPosition(Merchant,weap.Backdoor)')
 	action('Enter(Evander, weap.Door, True)')
 	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
