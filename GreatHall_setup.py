@@ -3,13 +3,13 @@ from dialogues import dialogue_char
 
 def GreatHall_setup():
 	action('StopSound()')
-	action('Enter(Evander, castle.Gate, true)')
+	action('Enter(Evander, Castle.Gate, true)')
 	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
 	action('EnableInput()')
-	action('Enter(King_Heinrich,  castle.Gate, true)')
+	action('Enter(King_Heinrich,  Castle.Gate, true)')
 	action('SetExpression(King_Heinrich, happy)')
-	action('Sit(King_Heinrich, castle.Throne)')
+	action('Sit(King_Heinrich, Castle.Throne)')
 	dialogue_char("King: Good Morning Evander")
 	dialogue_char("Evander: Good Morning your Highness")
 	dialogue_char("King: I have a mission for you")
@@ -19,6 +19,6 @@ def GreatHall_setup():
 	dialogue_char("Evander: I am not doing that. I am sorry")
 	dialogue_char("King: It is my command")
 	dialogue_char("Evander: Okay your honour")
-	action('Exit(Evander, castle.Gate, true)')
+	action('Exit(Evander, Castle.Gate, true)')
 
 	
