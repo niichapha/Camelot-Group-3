@@ -1,4 +1,4 @@
-from action import action
+from action1 import action
 
 def RedBranch_setup():
 
@@ -8,16 +8,13 @@ def RedBranch_setup():
 	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
 	action('EnableInput()')
-
-    action('StopSound()')
+	action('StopSound()')
 	action('PlaySound(River, PortNebula, True)')
 	action('Enter(Evander, PortNebula.Exit, True)')
 	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
 	action('EnableInput()')
-
-
-    action('StopSound()')
+	action('StopSound()')
 	action('PlaySound(Serenade, CampMilitar, True)')
 	action('Enter(Evander, CampMilitar.Door, True)')
 	action('SetCameraFocus(Evander)')

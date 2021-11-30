@@ -1,10 +1,7 @@
-from action import action 
-
+from action1 import action 
 def library_setup():
-	
 	action('StopSound()')
 	action('PlaySound(Serenity, Alch, True)')
-	
 	action('Enter(Evander, Library.Door, true)')
 	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
@@ -12,4 +9,4 @@ def library_setup():
 	action('PutDown(Evander, SpellBook,Library.Table)')
 	action('Sit(Evander, Library.Chair)')
 	action('EnableInput()')
-	#jdhfdksufose;kdflsdk.v
+
