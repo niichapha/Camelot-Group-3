@@ -11,6 +11,7 @@ def create_characters():
     Princess_Aida=Char('Princess_Aida','Noble','A','Short')
     Yennefer=Char('Yennefer','Peasant','A','Long')
     Merchant=Char('Merchant','Merchant','F')
+    alchemist=Char('Alchemist','Merchant','F')
     Enemy=Char('Enemy','Bandit','D')
     Soldier=Char('Soldier','HeavyArmour','D','Spiky')
     Stranger=Char('Stranger','Beggar','G','Straight')

@@ -2,11 +2,12 @@ from action1 import action
 def library_setup():
 	action('StopSound()')
 	action('PlaySound(Serenity, Alch, True)')
-	action('Enter(Evander, Library.Door, true)')
+	action('Enter(Evander, lib.Door, true)')
 	action('SetCameraFocus(Evander)')
 	action('SetCameraMode(follow)')
 	action('Pickup(Evander, SpellBook)')
-	action('PutDown(Evander, SpellBook,Library.Table)')
-	action('Sit(Evander, Library.Chair)')
+	action('Sit(Evander, lib.Chair)')
+	action('SetNarration(Please go to the Castle to see your Destiny!)')
+	action('PutDown(Evander, SpellBook,lib.Table)')
 	action('EnableInput()')
 
