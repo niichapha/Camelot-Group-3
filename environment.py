@@ -1,4 +1,3 @@
-from action1 import action
 from places import Places_game
 
 def create_places():

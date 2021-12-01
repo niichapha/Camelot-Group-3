@@ -1,16 +1,13 @@
+from typing import NamedTuple
 from Narration import Narration
-from actioncomm import action_command
+from actioncomm import action
 
 class Narration_methods(Narration):
-    def __init__(self,name,dialogue):
-        self.name=name
-        self.dialogue=dialogue
-        def sub_dialoge():
-            action_command('SetDialog('+name+','+dialogue+')')
-            action_command('ShowDialog()')
-            action_command('Wait(3)')
-            action_command('HideDialog()')
+    def sub_dialoge():
+        action('SetDialog()')
+        action('ShowDialog()')
+        action('Wait(3)')
+        action('HideDialog()')
 
-nar=Narration_methods()
 
 

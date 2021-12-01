@@ -1,4 +1,4 @@
-from action1 import action
+from actioncomm import action
 
 class Char:
     def __init__(self,name,body, cloth,hair='Spiky'): 

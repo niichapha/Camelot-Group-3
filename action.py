@@ -4,4 +4,5 @@ class action_game:
         self.command=command
         self.wait=wait
 
+
         

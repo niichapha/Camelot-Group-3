@@ -1,4 +1,4 @@
-from action1 import action
+from actioncomm import action
 from dialogues import dialogue_char 
 
 def blacksmith():
