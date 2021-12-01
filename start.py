@@ -1,27 +1,39 @@
-from actioncomm import action
-from environment import create_places
-from Characters import create_characters
-from Library import library_setup
-from GreatHall_setup import GreatHall_setup
-from alchemist_shop_setup import alchemist_shop
-from Blacksmith_setup import blacksmith
-from item import Item
+#This is the Starting point of the story. 
+# Configure this file in your startExperienceManager file
+# Try not to logic in this file except importing files.(should follow modularized coding practice)
 
+from Great_hall import Great_hall
+from action import action
+from blacksmith import BlackSmith
+from create_character import Create_character
+from library import library
+from create_location import Create_location
 
-action('SetTitle(\"The Destiny\")')
 action('ShowMenu()')
-action('Wait(3)')
-
-create_places()
-create_characters()
-
 action('HideMenu()')
 
-library_setup()
-GreatHall_setup()
-alchemist_shop()
-blacksmith()
+#CREATE LOCATIONS)
+lib = Create_location('lib', 'Library')
+castle = Create_location('castle', 'GreatHall')
+blacksmith = Create_location('blacksmith', 'Blacksmith')
+#-----------
+
+
+
+# CREATE Charactors 
+Evander=Create_character('Evander','D','Merchant', 'Spiky')
+Merchant=Create_character('Merchant', 'D','Merchant', 'Spiky')
+king=Create_character('king', 'D','king', 'Spiky')
+#-----------
+
+# CREATE OBJECTS OR GLOBAL VARIABLES
+#------------
+library(Evander, lib)
+Great_hall(Evander, king, castle)
+BlackSmith(Evander, Merchant)
+
+
 
 
 while(True):
-	input() 
+    input()
