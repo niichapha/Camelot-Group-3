@@ -1,14 +1,12 @@
-from actioncomm import action_command
+from action import action
+
 class Narration:
-    class __init__(self,name,dialogue):
-        self.name=name
+    def __init__(self,Name,dialogue):
+        self.Name=Name
         self.dialogue=dialogue
-        action_command('SetNarration('+name+','+dialogue+')')
-        action_command('ShowNarration()')
-        action_command('Wait(3)')
-        action_command('HideNarration()')
-
-
-
-
-
+    
+    def Message(Name, dialogue):
+        action('SetNarration('+Name+': '+dialogue+')')
+        action('ShowNarration')
+        action('Wait(3)')
+        action('HideNarration')
