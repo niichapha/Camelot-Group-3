@@ -4,7 +4,12 @@
 
 
 from action import action
-
-def create_item(item_name,item,position):
-    action('CreateItem('+item_name+','+item+')')
-    action('SetPosition('+item_name+','+position+')')
+class item:
+    def __init__(self,item_name,item,position):
+        self.item_name=item_name
+        self.item=item
+        self.position=position
+        
+    def create_item(item_name,item,position):
+        action('CreateItem('+item_name+','+item+')')
+        action('SetPosition('+item_name+','+position+')')
