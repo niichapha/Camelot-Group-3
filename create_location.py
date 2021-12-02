@@ -1,6 +1,6 @@
 from action import action
 
-class Create_location:   #Using A class to create Location
+class Create_location:
     
    def __init__(self,place_name,place):
         self.name=place_name
