@@ -6,10 +6,11 @@ from Great_hall import Great_hall
 from action import action
 from blacksmith import BlackSmith
 from create_character import Create_character
-from library import library
+from Library import library
 from create_location import Create_location
 
 action('ShowMenu()')
+action('Wait(3)')
 action('HideMenu()')
 
 #CREATE LOCATIONS)
@@ -17,7 +18,6 @@ lib = Create_location('lib', 'Library')
 castle = Create_location('castle', 'GreatHall')
 blacksmith = Create_location('blacksmith', 'Blacksmith')
 #-----------
-
 
 
 # CREATE Charactors 
@@ -31,8 +31,6 @@ king=Create_character('king', 'D','king', 'Spiky')
 library(Evander, lib)
 Great_hall(Evander, king, castle)
 BlackSmith(Evander, Merchant)
-
-
 
 
 while(True):
