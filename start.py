@@ -2,6 +2,8 @@
 # Configure this file in your startExperienceManager file
 # Try not to logic in this file except importing files.(should follow modularized coding practice)
 
+# This is the main file
+
 from Great_hall import Great_hall
 from action import action
 from blacksmith import BlackSmith

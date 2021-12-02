@@ -4,7 +4,7 @@
 from action import action
 from create_item import create_item
 
-class Create_character:
+class Create_character: # created character class
 
     def __init__(self, name , body_style , clothing_style , hair="Spiky"):
         self.name = name
