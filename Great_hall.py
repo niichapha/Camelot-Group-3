@@ -8,7 +8,8 @@ def Great_hall(Evander, king, castle):
     action('Enter('+Evander.name+', '+castle.name+'.Gate)')
     action('SetCameraFocus('+Evander.name+')')
     action('SetCameraMode(follow)')
-    action('WalkTo('+Evander.name+', '+king.name+')')
+    action('EnableInput()') #Enabling the Input for the Character to Walk
+    #action('WalkTo('+Evander.name+', '+king.name+')')
     action('SetExpression('+king.name+', happy)')
     Message(''+king.name+'', 'Good Morning '+Evander.name+'')
     Message(''+Evander.name+'', 'Good Morning your Highness')
