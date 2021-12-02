@@ -2,13 +2,14 @@ from action import action
 from create_item import create_item
 from Narration import Message
 
-def Great_hall(Evander, king, castle):
+def Great_hall(Evander, king, castle): #Enabled Input
     action('SetPosition('+king.name+', '+castle.name+'.Throne)')
     action('Sit('+king.name+', '+castle.name+'.Throne)')
     action('Enter('+Evander.name+', '+castle.name+'.Gate)')
     action('SetCameraFocus('+Evander.name+')')
     action('SetCameraMode(follow)')
-    action('WalkTo('+Evander.name+', '+king.name+')')
+    action('EnableInput()')
+    #action('WalkTo('+Evander.name+', '+king.name+')')
     action('SetExpression('+king.name+', happy)')
     Message(''+king.name+'', 'Good Morning '+Evander.name+'')
     Message(''+Evander.name+'', 'Good Morning your Highness')
