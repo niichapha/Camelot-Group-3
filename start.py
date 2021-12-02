@@ -8,6 +8,7 @@ from blacksmith import BlackSmith
 from create_character import Create_character
 from Library import library
 from create_location import Create_location
+from Narration import Narration
 
 action('ShowMenu()')
 action('Wait(3)')
