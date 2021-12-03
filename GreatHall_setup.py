@@ -18,7 +18,10 @@ def GreatHall_setup():
 	action('SetExpression(Evander, angry)')
 	dialogue_char("Evander: I am not doing that. I am sorry")
 	dialogue_char("King: It is my command")
-	dialogue_char("Evander: Okay your honour")
+	dialogue_char("King: I feel the lady will kill my life. SO, I want you to kill her")
+	dialogue_char("Evander: But, it is against my ethics. I wont do it")
+	dialogue_char("King: You have to do it no matter what")
+	dialogue_char("Evander: Okay, I will do it")
 	action('Exit(Evander, castle.Gate, true)')
 
 	
