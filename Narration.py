@@ -5,8 +5,8 @@ class Narration:
         self.Name=Name
         self.dialogue=dialogue
 
-def Message(Name, dialogue):
-    action('SetNarration('+Name+': '+dialogue+')')
-    action('ShowNarration')
-    action('Wait(3)')
-    action('HideNarration')
+    def Message(Name, dialogue):
+        action('SetNarration('+Name+': '+dialogue+')')
+        action('ShowNarration')
+        action('Wait(3)')
+        action('HideNarration')
