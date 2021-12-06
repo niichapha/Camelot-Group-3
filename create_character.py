@@ -4,7 +4,11 @@
 from action import action
 from create_item import create_item
 
+<<<<<<< HEAD
 class Create_character:
+=======
+class Create_character: # created character class
+>>>>>>> origin/beta_version2
 
     def __init__(self, name , body_style , clothing_style , hair="Spiky"):
         self.name = name
