@@ -6,7 +6,7 @@ class Narration:
         self.dialogue=dialogue
 
     def Message(Name, dialogue):
-        action('SetDialogue('+Name+': '+dialogue+')')
-        action('ShowDialogue')
+        action('SetDialog('+Name+': '+dialogue+')')
+        action('ShowDialog()')
         action('Wait(3)')
-        action('HideDialogue')
+        action('HideDialog()')
