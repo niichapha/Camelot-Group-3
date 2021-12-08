@@ -7,11 +7,14 @@
 from Great_hall import Great_hall
 from action import action
 from blacksmith import BlackSmith
+from bridge import bridge_scene
 from create_character import Create_character
 from Library import library
 from create_location import Create_location
 from Narration import Narration
 from create_item import item
+from forestpath import forest_scene
+from spookypath import spooky_path
 
 action('ShowMenu()')
 action('Wait(3)')
@@ -21,6 +24,11 @@ action('HideMenu()')
 lib = Create_location('lib', 'Library')
 castle = Create_location('castle', 'GreatHall')
 blacksmith = Create_location('blacksmith', 'Blacksmith')
+forest_path=Create_location('forest','ForestPath')
+bridge_path=Create_location('bridge','Bridge')
+spooky_path=Create_location('spooky','SpookyPath')
+dungeon=Create_location('dungeon','Dungeon')
+
 #-----------
 
 #Create Messages 
@@ -29,10 +37,14 @@ message12 = Narration('Merchant', 'The Sword will increase your strength by 20%'
 message21 = Narration('Evander', 'Ok, What abilities does this Hammer give me?') #leaf elements/ object
 message22 = Narration('Merchant', 'The Hammer will increase your strength by 10%') #leaf elements/ object
 
-# CREATE Charactors 
+# CREATE Characters 
 Evander=Create_character('Evander','D','Merchant', 'Spiky')  #composite element/ object
 Merchant=Create_character('Merchant', 'D','Merchant', 'Spiky')  #composite element/ object
 king=Create_character('king', 'D','king', 'Spiky') 
+enemy=Create_character('Enemy','D','Bandit','Spiky')
+princessaida=Create_character('aida','A','Queen','Ponytail')
+kingbodyguard=Create_character('bodyguard','D','HeavyArmour','Spiky')
+soldier=Create_character('soldier','D','HeavyArmour','Spiky')
 #-----------
 
 # CREATE OBJECTS OR GLOBAL VARIABLES
@@ -40,6 +52,12 @@ king=Create_character('king', 'D','king', 'Spiky')
 library(Evander, lib)
 Great_hall(Evander, king, castle)
 BlackSmith(Evander, Merchant)
+forest_scene(Evander,enemy,forest_path)
+spooky_path(Evander,soldier,dungeon)
+
+
+
+
 
 #Using Composite Design Pattern
 Evander.Message(message11)
