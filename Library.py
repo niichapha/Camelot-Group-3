@@ -1,6 +1,7 @@
 from action import action
 from create_item import create_item
-from Narration import Message
+from dialogue_class import Dialogue
+from dialogue_func import message
 
 
 def library(Evander, lib):
@@ -10,7 +11,7 @@ def library(Evander, lib):
     create_item('Spellbook', 'SpellBook', ''+lib.name+'.AlchemistTable')
     action('Pickup('+Evander.name+', Spellbook, '+lib.name+'.AlchemistTable)')
     action('Sit('+Evander.name+', '+lib.name+'.Chair)')
-    Message('System', 'Please go to the castle to see your destiny')
+    message('System','I have a mission for you')
     action('PutDown('+Evander.name+', Spellbook, '+lib.name+'.AlchemistTable)')
     action('SetPosition(Spellbook, '+lib.name+'.AlchemistTable)')
     action('Exit('+Evander.name+', '+lib.name+'.Door)')
