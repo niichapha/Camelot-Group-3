@@ -16,7 +16,7 @@ def forest_scene(Evander,enemy,forest_path):
     Narration.Message('Enemy',':I am not allowed to disclose it to you')
     action('Wait(1)')
     attack()
-    action
+    action()
     
 
     
