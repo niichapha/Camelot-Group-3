@@ -3,16 +3,13 @@ from create_item import item
 from attack import attack
 from Narration import Narration
 
-def options():
-    while True:
-        received = input()
-        if received == 'input Talk Tom':
-            action('Die(Kate)')
-        elif received == 'input Attack Tom':
-            action('Dance(Tom)')
 
-action('EnableIcon(, city, Tom, "Talk")')
-action('EnableIcon(Attack, sword, Tom, "Attack")')
+def Ruins(Evander, Ruins):
+    action('SetPosition('+Evander.name+', '+Ruins.name+')')
+    action('SetCameraFocus('+Evander.name+')')
+    action('SetCameraMode(follow)')
+    item.create_item('Openscroll','OpenScroll', ''+Ruins.name+'.Altar')
+    action('WalkTo('+Evander.name+', Openscroll)')
 
 
 def Hotel(Evander, spy, hotel):
