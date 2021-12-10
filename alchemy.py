@@ -5,6 +5,7 @@ from create_location import Create_location
 from create_character import Create_character
 from purplepotion import *
 
+# Alchemy file
 city_location=Create_location('city', 'City')
 Evander=Create_character('Evander','D','Merchant', 'Spiky')
 
