@@ -2,11 +2,19 @@ from action import action
 from create_item import item
 from attack import attack
 from Narration import Narration
+from create_character import Create_character
+from create_location import Create_location
+
+Evander=Create_character('Evander','D','Merchant', 'Spiky')
+spy=Create_character('Spy', 'D', 'Bandit', 'Spiky')
+king=Create_character('king', 'D','king', 'Spiky')
+hotel = Create_location('Hotel', 'Tavern')
+castle = Create_location('castle', 'GreatHall')
 
 def check_for_door():
     while True:
         received = input()
-        if received == 'input east_exit city.BrownHouseDoor':
+        if received == 'input east_exit city.Fountain':
             action('Exit(Evander, city.EastEnd)')
             action('Enter(Evander, Ruins.Exit)')
             action('SetCameraFocus(Evander)')
@@ -16,8 +24,9 @@ def check_for_door():
             action('Take(Evander, Openscroll)')
             Narration.Message('System', 'This scroll contains the path to bar!')
             action('Exit(Evander, Ruins.Exit)')
-            break
-        elif received == 'input west_exit city.GreenHouseDoor':
+            Hotel(Evander, spy, hotel)
+            Castle(Evander, king, castle)
+        elif received == 'input west_exit city.Fountain':
             action('Exit(Evander, city.WestEnd)')
             action('Enter(Evander, farm.Exit)')
             action('SetCameraFocus(Evander)')
@@ -27,12 +36,13 @@ def check_for_door():
             action('Take(Evander, Redbook)')
             Narration.Message('System', 'This book contains detailed map to find bar!')
             action('Exit(Evander, farm.Exit)')
-            break
+            Hotel(Evander, spy, hotel)
+            Castle(Evander, king, castle)
 
 
 def Hotel(Evander, spy, hotel):
-    action('SetPosition('+Evander.name+', '+hotel.name+'.Door)')
-    #action('Enter('+Evander.name+', '+hotel.name+'.Door)')
+    #action('SetPosition('+Evander.name+', '+hotel.name+'.Door)')
+    action('Enter('+Evander.name+', '+hotel.name+'.Door)')
     action('SetCameraFocus('+Evander.name+')')
     action('SetCameraMode(follow)')
     action('Sit('+Evander.name+', '+hotel.name+'.BackLeftStool)')
@@ -44,11 +54,11 @@ def Hotel(Evander, spy, hotel):
     action('Exit('+Evander.name+', '+hotel.name+'.Door)')
 
 def city_place(Evander, city_location):
-    action('SetPosition('+Evander.name+', '+city_location.name+')')
+    action('Enter('+Evander.name+', '+city_location.name+'.NorthEnd)')
     action('SetCameraFocus('+Evander.name+')')
     action('SetCameraMode(follow)')
-    action('EnableIcon(west_exit, exit, '+city_location.name+'.GreenHouseDoor, "west_exit")')
-    action('EnableIcon(east_exit, exit, '+city_location.name+'.BrownHouseDoor, "East_exit")')
+    action('EnableIcon(west_exit, exit, '+city_location.name+'.Fountain, "west_exit")')
+    action('EnableIcon(east_exit, exit, '+city_location.name+'.Fountain, "East_exit")')
     action('EnableInput()')
     check_for_door()
 

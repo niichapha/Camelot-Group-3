@@ -1,6 +1,6 @@
 from attack import attack
-from item import create_item
-from Narration import Message
+from create_item import item
+from Narration import Narration
 
 
 def check_for_success(command):
@@ -23,8 +23,6 @@ def options():
     while True:
         received = input()
         if received == 'input Exit City.EastEnd':
-
-			def Port_Setup():
 				attack('Evander, Soldier1')
 				action('SetPosition(Yenefer, Port.BigShip)')
 				action('EnableInput()')
@@ -40,43 +38,12 @@ def options():
 				Narration.Message(''+Yenefer.name+'', 'Sure, I just landed here you can show me around!'+Evander.name+'')
 				action('Exit(Yenefer, Port.Exit, true)')
 				action('Exit(Evander, Port.Exit, true)')
+				break
 
-			def Tavern_setup():
-				action('Enter(Evander, Tavern.Door, true)')
-				action('Enter(Yenefer, Tavern.Door, true)')
-				item.create_item('BeerMug', 'Mug', 'Tavern.Bar.Left)')
-				item.create_item('BeerMug', 'Mug', 'Tavern.Bar.Right)')
-				action('EnableInput()')
-				action('WalkTo(Yenefer, Tavern.Bar)')
-				action('Wait(5s)')
-				action('Drink(Evander)')
-				action('Drink(Yenefer)')
-				Narration.Message(''+Evander.name+'', 'So what have you been upto?'+Yenefer.name+'')
-				Narration.Message(''+Yenefer.name+'', 'I am a Witch for Mulduar'+Yenefer.name+'')
-				Narration.Message(''+Evander.name+'', 'Oh that Nasty place.'+Yenefer.name+'')
-				Narration.Message(''+Evander.name+'', 'How have you been managing there?'+ Yenefer.name+'')
-				action('Drink(Evander)')
-				action('Drink(Yenefer)')
-				Narration.Message(''+Yenefer.name+'', 'I get Free beer!'+Evander.name+'')
-				action('SetExpression(Evander, Laugh)')
-				action('SetExpression(Yenefer, Laugh)')
-				action('SetExpression(Evander, Neutral)')
-				action('SetExpression(Yenefer, Neutral)')
-				Narration.Message(''+Evander.name+'', 'Do you want to join me on one small adventure?'+Yenefer.name+'')
-				action('SetExpression(Yenefer, surprised)')
-				Narration.Message(''+Yenefer.name+'', 'Oh now the Witcher wants me to spend more time with him'+Evander.name+'')
-				action('SetExpression(Evander, happy)')
-				Narration.Message(''+Evander.name+'', 'I know that you want to join me'+Yenefer.name+'')
-				Narration.Message(''+Yenefer.name+'', 'Okay alright, I will come along.'+Evander.name+'')
-				action('WalkTo(Yenefer, Tavern.Door)')
-				action('Wait(5s)')
-				action('Exit(Yenefer, Tavern.Door, true)')
-				action('Exit(Evander, Tavern.Door, true)')
-
-        elif received == 'input Exit City.WestEnd':
+		elif received == 'input Exit City.WestEnd':
 			action('SetPosition(Yenefer, Azkaban.Bed)')
 			action('Sit(Soldier2, Azkaban.Chair)')
-                        action('Enter(Evander, Azkaban.Door, true)')
+            action('Enter(Evander, Azkaban.Door, true)')
 			action('WalkTo(Soldier2, Evander)')
 			attack(Evander, Soldier2)
 			action('EnableInput()')
@@ -89,6 +56,39 @@ def options():
 			Narration.Message(''+Evander.name+'', 'Okay lets get you out of here before they figure out. Tell me the story on the way.'+Evander.name+'')
 			action('Exit(Yenefer, Azkaban.door, true)')
 			action('Exit(Evander, Azkaban.door, true)')
+			break
+
+def Tavern_setup():
+	action('Enter(Evander, Tavern.Door, true)')
+	action('Enter(Yenefer, Tavern.Door, true)')
+	item.create_item('BeerMug', 'Mug', 'Tavern.Bar.Left)')
+	item.create_item('BeerMug', 'Mug', 'Tavern.Bar.Right)')
+	action('EnableInput()')
+	action('WalkTo(Yenefer, Tavern.Bar)')
+	action('Wait(5s)')
+	action('Drink(Evander)')
+	action('Drink(Yenefer)')
+	Narration.Message(''+Evander.name+'', 'So what have you been upto?'+Yenefer.name+'')
+	Narration.Message(''+Yenefer.name+'', 'I am a Witch for Mulduar'+Yenefer.name+'')
+	Narration.Message(''+Evander.name+'', 'Oh that Nasty place.'+Yenefer.name+'')
+	Narration.Message(''+Evander.name+'', 'How have you been managing there?'+ Yenefer.name+'')
+	action('Drink(Evander)')
+	action('Drink(Yenefer)')
+	Narration.Message(''+Yenefer.name+'', 'I get Free beer!'+Evander.name+'')
+	action('SetExpression(Evander, Laugh)')
+	action('SetExpression(Yenefer, Laugh)')
+	action('SetExpression(Evander, Neutral)')
+	action('SetExpression(Yenefer, Neutral)')
+	Narration.Message(''+Evander.name+'', 'Do you want to join me on one small adventure?'+Yenefer.name+'')
+	action('SetExpression(Yenefer, surprised)')
+	Narration.Message(''+Yenefer.name+'', 'Oh now the Witcher wants me to spend more time with him'+Evander.name+'')
+	action('SetExpression(Evander, happy)')
+	Narration.Message(''+Evander.name+'', 'I know that you want to join me'+Yenefer.name+'')
+	Narration.Message(''+Yenefer.name+'', 'Okay alright, I will come along.'+Evander.name+'')
+	action('WalkTo(Yenefer, Tavern.Door)')
+	action('Wait(5s)')
+	action('Exit(Yenefer, Tavern.Door, true)')
+	action('Exit(Evander, Tavern.Door, true)')
 
 
         action('SetNight()')

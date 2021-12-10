@@ -6,6 +6,7 @@
 
 from Great_hall import Great_hall
 from action import action
+from alchemy import alchemy
 from blacksmith import BlackSmith
 from bridge import bridge
 #from city_place import city_place
@@ -33,6 +34,7 @@ spookypath=Create_location('spooky','SpookyPath')
 dungeon=Create_location('dungeon','Dungeon')
 ruins=Create_location('Ruins', 'Ruins')
 farm=Create_location('farm', 'Farm')
+Alchemy=Create_location('Alchemy', 'AlchemyShop')
 
 
 # CREATE Characters 
@@ -51,11 +53,12 @@ soldier=Create_character('soldier','D','HeavyArmour','Spiky')
 #-----------
 
 # Calling location functions with parameters
-#library(Evander, lib)
-#Great_hall(Evander, king, castle)
-#BlackSmith(Evander, Merchant)
-city_place(Evander, city_location)
-Hotel(Evander, spy, hotel)
+# library(Evander, lib)
+# Great_hall(Evander, king, castle)
+# BlackSmith(Evander, Merchant)
+alchemy()
+#Hotel(Evander, spy, hotel)
+#Castle(Evander, king, castle)
 # forest_scene(Evander,enemy,forest_path)
 # spooky_path(Evander,soldier,dungeon)
 
