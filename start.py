@@ -8,13 +8,13 @@ from Great_hall import Great_hall
 from action import action
 from blacksmith import BlackSmith
 from bridge import bridge
-from city_place import city_place
+#from city_place import city_place
 from create_character import Create_character
 from Library import library
 from create_location import Create_location
 from Narration import Narration
 from create_item import item
-from purplepotion import Castle, Hotel, Ruins
+from purplepotion import *
 from forestpath import forest_scene
 from spookypath import spooky_path
 
@@ -25,13 +25,14 @@ action('HideMenu()')
 lib = Create_location('lib', 'Library')
 castle = Create_location('castle', 'GreatHall')
 blacksmith = Create_location('blacksmith', 'Blacksmith')
+city_location=Create_location('city', 'City')
 hotel = Create_location('Hotel', 'Tavern')
 forest_path=Create_location('forest','ForestPath')
 bridge_path=Create_location('bridge','Bridge')
 spookypath=Create_location('spooky','SpookyPath')
 dungeon=Create_location('dungeon','Dungeon')
-city_location=Create_location('city', 'City')
 ruins=Create_location('Ruins', 'Ruins')
+farm=Create_location('farm', 'Farm')
 
 
 # CREATE Characters 
@@ -50,13 +51,14 @@ soldier=Create_character('soldier','D','HeavyArmour','Spiky')
 #-----------
 
 # Calling location functions with parameters
-# library(Evander, lib)
-# Great_hall(Evander, king, castle)
-# BlackSmith(Evander, Merchant)
-# Hotel(Evander, spy, hotel)
+#library(Evander, lib)
+#Great_hall(Evander, king, castle)
+#BlackSmith(Evander, Merchant)
+city_place(Evander, city_location)
+Hotel(Evander, spy, hotel)
 # forest_scene(Evander,enemy,forest_path)
 # spooky_path(Evander,soldier,dungeon)
-city_place(Evander, city_location)
+
 
 
 
