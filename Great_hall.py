@@ -9,7 +9,7 @@ def Great_hall(Evander, king, castle): #Enabled Input
     action('SetCameraFocus('+Evander.name+')')
     action('SetCameraMode(follow)')
     action('EnableInput()')
-    #action('WalkTo('+Evander.name+', '+king.name+')')
+    action('WalkTo('+Evander.name+', '+king.name+')')
     action('SetExpression('+king.name+', happy)')
     Narration.Message(''+king.name+'', 'Good Morning '+Evander.name+'')
     Narration.Message(''+Evander.name+'', 'Good Morning your Highness')
