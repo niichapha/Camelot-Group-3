@@ -35,6 +35,8 @@ dungeon=Create_location('dungeon','Dungeon')
 ruins=Create_location('Ruins', 'Ruins')
 farm=Create_location('farm', 'Farm')
 Alchemy=Create_location('Alchemy', 'AlchemyShop')
+port=Create_location('Port', 'Port')
+
 
 
 # CREATE Characters 
@@ -46,6 +48,8 @@ enemy=Create_character('Enemy','D','Bandit','Spiky')
 princessaida=Create_character('aida','A','Queen','Ponytail')
 kingbodyguard=Create_character('bodyguard','D','HeavyArmour','Spiky')
 soldier=Create_character('soldier','D','HeavyArmour','Spiky')
+yenefer=Create_character('yenefer', 'E', 'Witch', 'Ponytail')
+witch=Create_character('witch', 'D', 'Witch', 'Ponytail')
 
 #-----------
 

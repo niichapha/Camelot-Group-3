@@ -1,3 +1,4 @@
+from RedBranch_setup import city_loc
 from action import action
 from Narration import Narration
 from create_item import item
@@ -13,9 +14,14 @@ def check_for_potion():
     while True:
         received = input()
         if received == 'input potion Purplepotion':
+            action('Pickup(Evander, Purplepotion)')
             action('Exit(Evander, Alchemy.Door)')
             city_place(Evander, city_location)
             break
+        elif received == 'input potion Bluepotion':
+            action('Exit(Evander, Alchemy.Door)')
+            city_loc(Evander, city_location)
+
 
 def alchemy():
     action('Enter(Evander, Alchemy.Door)')

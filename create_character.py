@@ -5,7 +5,7 @@ from action import action
 
 class Create_character: # created character class
 
-    def __init__(self, name , body_style , clothing_style , hair="Spiky"):
+    def __init__(self, name , body_style , clothing_style , hair):
         self.name = name
         action('CreateCharacter('+name+','+body_style+')')
         action('SetClothing('+name+', '+clothing_style+')')
